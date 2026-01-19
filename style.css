@@ -1,0 +1,29 @@
+.embed {
+    background-color: #2f3136;
+    border-left: 4px solid #5865f2;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 4px;
+    max-width: 300px;
+}
+
+.embed h4 { margin: 0 0 5px 0; color: white; }
+.embed p { margin: 0 0 10px 0; font-size: 13px; color: #b9bbbe; }
+
+.join-btn {
+    background-color: #43b581;
+    color: white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.join-btn:hover { background-color: #3ca374; }
+
+.boost-server-icon {
+    background-color: #ff73fa !important;
+    margin-top: 8px;
+}
+
