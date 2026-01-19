@@ -1,3 +1,61 @@
-<div class="sidebar-servers" id="server-rail">
-  <div class="server-icon active" onclick="switchServer('main')">B</div>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>21 New Notifications</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-screen">
+        <div class="login-box">
+            <div class="login-logo">B</div>
+            <h2>Welcome back!</h2>
+            <p>We're so excited to see you again!</p>
+            <label>USERNAME</label>
+            <input type="text" id="username-input" placeholder="Enter your bootleg name">
+            <button onclick="login()">Log In</button>
+            <div class="login-footer">Need an account? <span class="link-text">Register</span></div>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <div class="sidebar-servers" id="server-rail">
+            <div class="server-icon active">B</div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+        </div>
+
+        <div class="sidebar-channels">
+            <div class="server-header">Bootleg Server</div>
+            <div class="channel-list">
+                <div class="channel active" onclick="switchChannel(this, false, 'general')"># general</div>
+                <div class="channel" onclick="switchChannel(this, false, 'self-promo')"># self-promo</div>
+                <div class="channel" onclick="switchChannel(this, true, 'join-and-boost')"># join-and-boost</div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="chat-area">
+                <div id="message-logs" class="messages"></div>
+                <div class="typing-container"><span id="typing-text"></span></div>
+                <div class="input-container" id="input-wrapper">
+                    <input type="text" id="user-input" placeholder="Message #general">
+                    <div id="locked-overlay" class="hidden">You do not have permission to send messages in this channel.</div>
+                </div>
+            </div>
+
+            <div class="sidebar-members">
+                <div class="member-group">ONLINE — 21</div>
+                <div id="member-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="menu-overlay" class="menu-hidden">
+        <button onclick="alert('You cannot leave.')">Leave Server</button>
+        <button onclick="triggerBoost()">Boost Server</button>
+    </div>
+
+    <script src="script.js"></script>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</body>
+</html>
